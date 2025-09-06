@@ -2,16 +2,10 @@ import React from 'react'
 import { ArrowRight, Zap, GraduationCap, Sprout, Shield } from 'lucide-react'
 
 const Hero = () => {
-  const scrollToSection = (href) => {
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
 
   return (
     <section id="hero" className="relative bg-gradient-to-br from-primary-50 via-blue-50 to-purple-100 overflow-hidden">
-      <div className="container-custom section-padding">
+      <div className="container-custom section-padding relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="space-y-8 animate-fade-in">
@@ -21,23 +15,37 @@ const Hero = () => {
                 <span className="text-primary-600 block">Innovation</span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-                Levenn delivers innovative technologies in energy, security, and agriculture 
-                across Tanzania and East Africa, while building capacity in STEM education 
-                for sustainable development.
+                Delivering innovative technology solutions for sustainable community development 
+                across East Africa.
               </p>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
-                onClick={() => scrollToSection('#products')}
+                onClick={() => {
+                  console.log('Explore Solutions button clicked!')
+                  const element = document.querySelector('#products')
+                  console.log('Found products element:', element)
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  } else {
+                    console.log('Products section not found!')
+                  }
+                }}
                 className="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-primary-600 hover:to-primary-700 transition-all duration-300 inline-flex items-center justify-center group transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                Explore Our Solutions
+                Explore Solutions
                 <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
               </button>
               <button 
-                onClick={() => scrollToSection('#about')}
+                onClick={() => {
+                  console.log('Learn More button clicked!')
+                  const element = document.querySelector('#about')
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  }
+                }}
                 className="border-2 border-primary-500 text-primary-600 px-8 py-4 rounded-xl font-semibold hover:bg-primary-50 transition-all duration-300 transform hover:scale-105"
               >
                 Learn More
@@ -106,8 +114,8 @@ const Hero = () => {
       </div>
 
       {/* Background Decorations */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000 -z-10"></div>
     </section>
   )
 }

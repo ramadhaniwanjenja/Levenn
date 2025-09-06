@@ -11,44 +11,38 @@ const Team = () => {
   const teamMembers = [
     {
       name: 'Eliamani Kiavi',
-      role: 'Chief Executive Officer',
+      role: 'CEO',
       image: shafiiProfile,
-      description: 'Visionary leader driving strategic direction and growth initiatives across all business verticals.',
       gradient: 'from-primary-400 to-primary-600'
     },
     {
       name: 'Shafii Ramadhani',
-      role: 'Chief Technology Officer',
+      role: 'CTO',
       image: shafiiProfile,
-      description: 'Leading technology innovation and overseeing all technical aspects of our solutions.',
       gradient: 'from-purple-400 to-purple-600'
     },
     {
       name: 'Silvia Ruwocha',
-      role: 'Head of Communications',
+      role: 'Communications',
       image: silviaProfile,
-      description: 'Driving communications strategy and ensuring effective dissemination of our solutions to the community.',
       gradient: 'from-green-400 to-green-600'
     },
     {
       name: 'Andrea Memba',
-      role: 'Head of Marketing',
+      role: 'Marketing',
       image: andreaProfile,
-      description: 'Building brand awareness and connecting our solutions with communities across East Africa.',
       gradient: 'from-pink-400 to-pink-600'
     },
     {
       name: 'Brenda Sanga',
-      role: 'Head of Operations',
+      role: 'Operations',
       image: brendaProfile,
-      description: 'Ensuring smooth operations and efficient delivery of our solutions to communities.',
       gradient: 'from-orange-400 to-orange-600'
     },
     {
       name: 'Sharon Mushi',
-      role: 'Customer Success Manager',
+      role: 'Customer Success',
       image: sharonProfile,
-      description: 'Ensuring customer satisfaction and building lasting relationships with our community partners.',
       gradient: 'from-teal-400 to-teal-600'
     }
   ]
@@ -60,14 +54,10 @@ const Team = () => {
         <div className="text-center space-y-6 mb-20">
           <div className="inline-block">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Leadership Team
+              Our Team
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-primary-600 mx-auto rounded-full"></div>
           </div>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Meet the passionate leaders driving Levenn's mission to transform communities 
-            across Africa through innovative technology solutions
-          </p>
         </div>
 
         {/* Team Grid */}
@@ -99,9 +89,6 @@ const Team = () => {
                   </h3>
                   <p className="text-primary-600 font-semibold text-lg">
                     {member.role}
-                  </p>
-                  <p className="text-gray-600 leading-relaxed">
-                    {member.description}
                   </p>
                 </div>
 
@@ -158,8 +145,16 @@ const Team = () => {
               We're always looking for passionate individuals who share our vision 
               of transforming communities through technology.
             </p>
-            <button className="bg-white text-primary-600 px-8 py-3 rounded-full font-semibold hover:bg-primary-50 transition-colors duration-300 transform hover:scale-105">
-              View Open Positions
+            <button 
+              onClick={() => {
+                const element = document.querySelector('#contact')
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' })
+                }
+              }}
+              className="bg-white text-primary-600 px-8 py-3 rounded-full font-semibold hover:bg-primary-50 transition-colors duration-300 transform hover:scale-105"
+            >
+              Join Our Team
             </button>
           </div>
         </div>

@@ -106,8 +106,7 @@ const Contact = () => {
               <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-primary-600 mx-auto rounded-full"></div>
             </div>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Ready to partner with us or learn more about our solutions? 
-              We'd love to hear from you and explore how we can work together.
+              Let's work together to transform communities.
             </p>
           </div>
 

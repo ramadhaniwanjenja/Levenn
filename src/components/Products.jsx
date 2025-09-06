@@ -113,13 +113,12 @@ const Products = () => {
           <div className="text-center space-y-6 mb-20">
             <div className="inline-block">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Our Solutions
-              </h2>
+              Our Solutions
+            </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-primary-600 mx-auto rounded-full"></div>
             </div>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Comprehensive technology solutions addressing energy, education, 
-              agriculture, and security challenges across East Africa.
+              Technology solutions for energy, education, agriculture, and security.
             </p>
           </div>
 
@@ -144,7 +143,7 @@ const Products = () => {
                     <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/30">
                       <product.icon size={32} className="text-white" />
                     </div>
-                  </div>
+                    </div>
                   
                   {/* Title Overlay */}
                   <div className="absolute bottom-6 left-6 right-6">
@@ -185,8 +184,16 @@ const Products = () => {
                     </ul>
                   </div>
 
-                  <button className="w-full bg-gradient-to-r from-primary-500 to-primary-600 text-white py-4 px-6 rounded-xl font-semibold hover:from-primary-600 hover:to-primary-700 transition-all duration-300 inline-flex items-center justify-center group transform hover:scale-105">
-                    Learn More
+                  <button 
+                    onClick={() => {
+                      const element = document.querySelector('#contact')
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' })
+                      }
+                    }}
+                    className="w-full bg-gradient-to-r from-primary-500 to-primary-600 text-white py-4 px-6 rounded-xl font-semibold hover:from-primary-600 hover:to-primary-700 transition-all duration-300 inline-flex items-center justify-center group transform hover:scale-105"
+                  >
+                    Get Started
                     <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
@@ -205,7 +212,7 @@ const Products = () => {
                 onClick={scrollToContact}
                 className="bg-white text-primary-600 px-8 py-4 rounded-xl font-semibold hover:bg-primary-50 transition-all duration-300 transform hover:scale-105 inline-flex items-center"
               >
-                Get Started Today
+                Contact Us
                 <ArrowRight size={20} className="ml-2" />
               </button>
             </div>

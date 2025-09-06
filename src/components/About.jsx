@@ -5,23 +5,19 @@ const About = () => {
   const values = [
     {
       icon: Heart,
-      title: 'Community First',
-      description: 'We prioritize community needs and ensure our solutions are accessible and impactful for local populations.'
+      title: 'Community'
     },
     {
       icon: Globe,
-      title: 'Sustainable Innovation',
-      description: 'Our technologies are designed for long-term sustainability and environmental responsibility.'
+      title: 'Innovation'
     },
     {
       icon: Users,
-      title: 'Collaborative Growth',
-      description: 'We believe in partnerships and collaborative approaches to solve complex challenges.'
+      title: 'Collaboration'
     },
     {
       icon: Award,
-      title: 'Excellence in Delivery',
-      description: 'We maintain the highest standards in all our products and services.'
+      title: 'Excellence'
     }
   ]
 
@@ -35,13 +31,11 @@ const About = () => {
             <div className="inline-block">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 About <span className="gradient-text">Levenn</span>
-              </h2>
+            </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-primary-600 mx-auto rounded-full"></div>
             </div>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              We are a technology company dedicated to empowering communities across 
-              Tanzania, East Africa, and Africa with innovative solutions in energy, 
-              security, agriculture, and STEM education.
+              Empowering communities across East Africa with innovative technology solutions.
             </p>
           </div>
 
@@ -55,9 +49,8 @@ const About = () => {
                 <h3 className="text-3xl font-bold text-gray-900">Our Mission</h3>
               </div>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Empowering communities across Tanzania, East Africa, and Africa at large with 
-                innovative technologies in energy, security, and agriculture, while building 
-                capacity in STEM education for sustainable development.
+                Delivering innovative solutions in energy, agriculture, security, and STEM education 
+                for sustainable community development.
               </p>
               <div className="space-y-4">
                 <h4 className="font-semibold text-gray-900">We achieve this by:</h4>
@@ -88,9 +81,8 @@ const About = () => {
               </div>
               <div className="bg-primary-50 rounded-xl p-6">
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  By 2030, Levenn will be the leading provider of reliable, smart, and 
-                  accessible technological solutions in energy, security, and agriculture, 
-                  transforming lives and driving Africa's transition to sustainable development.
+                  Leading provider of smart, accessible technology solutions transforming 
+                  communities across Africa by 2030.
                 </p>
               </div>
               
@@ -123,9 +115,6 @@ const About = () => {
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
               Our Values
             </h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The principles that guide our work and shape our impact in communities across Africa
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -134,12 +123,9 @@ const About = () => {
                 <div className="w-20 h-20 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <value.icon className="text-white" size={32} />
                 </div>
-                <h4 className="text-xl font-semibold text-gray-900 group-hover:text-primary-600 transition-colors duration-300">
+                <h4 className="text-2xl font-semibold text-gray-900 group-hover:text-primary-600 transition-colors duration-300">
                   {value.title}
                 </h4>
-                <p className="text-gray-600 leading-relaxed">
-                  {value.description}
-                </p>
               </div>
             ))}
           </div>

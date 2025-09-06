@@ -88,7 +88,15 @@ const Impact = () => {
             <p className="text-gray-200 mb-6 max-w-2xl mx-auto">
               Join us in creating a sustainable future for communities across East Africa
             </p>
-            <button className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <button 
+              onClick={() => {
+                const element = document.querySelector('#contact')
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' })
+                }
+              }}
+              className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
               Partner With Us
             </button>
           </div>

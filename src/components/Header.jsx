@@ -14,10 +14,17 @@ const Header = () => {
   ]
 
   const scrollToSection = (href) => {
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
+    setTimeout(() => {
+      const element = document.querySelector(href)
+      if (element) {
+        const headerHeight = 80 // Account for sticky header
+        const elementPosition = element.offsetTop - headerHeight
+        window.scrollTo({
+          top: elementPosition,
+          behavior: 'smooth'
+        })
+      }
+    }, 100)
     setIsMenuOpen(false)
   }
 
