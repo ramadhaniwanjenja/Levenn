@@ -1,7 +1,12 @@
 {
-  "buildCommand": "npm install && npx vite build",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "framework": "vite",
   "installCommand": "npm install",
-  "devCommand": "vite --port $PORT"
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
