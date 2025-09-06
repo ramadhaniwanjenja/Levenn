@@ -102,7 +102,7 @@ const Contact = () => {
             <div className="inline-block">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Get In <span className="gradient-text">Touch</span>
-              </h2>
+            </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-primary-600 mx-auto rounded-full"></div>
             </div>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
